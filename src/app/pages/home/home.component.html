@@ -1,4 +1,67 @@
 <app-resistor [colors]="colors"></app-resistor>
 <div class="app-page resitor-spacer">
   <h1>{{ resistorColorsDecode() }}</h1>
+
+  <div class="color-pickers">
+    <ul class="vertical-picker" id="first">
+      <p>1º Line</p>
+      <li
+        *ngFor="let color of resistorColorsInArray"
+        class="color fisrt-line-color-{{ color.name }} {{
+          color.name === 'black' ? 'is-black' : ''
+        }}"
+        [ngStyle]="{ background: color.hex }"
+        (click)="markAsSelected(color.name, 'first')"
+      >
+        <span>
+          {{ color.name }}
+        </span>
+      </li>
+    </ul>
+    <ul class="vertical-picker" id="second">
+      <p>2º Line</p>
+      <li
+        *ngFor="let color of resistorColorsInArray"
+        class="color second-line-color-{{ color.name }} {{
+          color.name === 'black' ? 'is-black' : ''
+        }}"
+        [ngStyle]="{ background: color.hex }"
+        (click)="markAsSelected(color.name, 'second')"
+      >
+        <span>
+          {{ color.name }}
+        </span>
+      </li>
+    </ul>
+    <ul class="vertical-picker" id="third">
+      <p>3º Line</p>
+      <li
+        *ngFor="let color of resistorColorsInArray"
+        class="color third-line-color-{{ color.name }} {{
+          color.name === 'black' ? 'is-black' : ''
+        }}"
+        [ngStyle]="{ background: color.hex }"
+        (click)="markAsSelected(color.name, 'third')"
+      >
+        <span>
+          {{ color.name }}
+        </span>
+      </li>
+    </ul>
+    <ul class="vertical-picker" id="fourth">
+      <p>4º Line</p>
+      <li
+        *ngFor="let color of resistorColorsInArray"
+        class="color fourth-line-color-{{ color.name }} {{
+          color.name === 'black' ? 'is-black' : ''
+        }}"
+        [ngStyle]="{ background: color.hex }"
+        (click)="markAsSelected(color.name, 'fourth')"
+      >
+        <span>
+          {{ color.name }}
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>

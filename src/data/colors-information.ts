@@ -3,6 +3,7 @@ type colorsOptions = {
     lines: number;
     tolerance: number;
     hex: string;
+    name?: string;
   };
 };
 
@@ -10,7 +11,7 @@ export const resistorColors: colorsOptions = {
   black: {
     lines: 0,
     tolerance: 0,
-    hex: '#000',
+    hex: '#000000',
   },
   brown: {
     lines: 1,
@@ -68,3 +69,7 @@ export const resistorColors: colorsOptions = {
     hex: '#aaa9ad',
   },
 };
+
+export const resistorColorsInArray = Object.keys(resistorColors).map((key) => {
+  return { name: (resistorColors[key].name = key), ...resistorColors[key] };
+});

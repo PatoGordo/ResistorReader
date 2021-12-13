@@ -1,3 +1,43 @@
 .resitor-spacer {
-  margin-top: 180px;
+  margin-top: 140px;
+}
+
+.color-pickers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  .vertical-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    list-style: none;
+    background: #ccc;
+    border-radius: 8px;
+    position: relative;
+    z-index: 9;
+    p {
+      font-weight: 600;
+    }
+    li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 8;
+      padding: 4px;
+      &.selected {
+        span {
+          font-weight: 900;
+        }
+      }
+      &.is-black {
+        color: #fff;
+      }
+    }
+  }
 }

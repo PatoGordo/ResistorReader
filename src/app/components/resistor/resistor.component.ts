@@ -7,15 +7,12 @@ import { resistorColors } from 'src/data/colors-information';
   styleUrls: ['./resistor.component.scss'],
 })
 export class ResistorComponent implements OnInit {
-  @Input() colors!: string[];
+  @Input()
+  colors!: string[];
 
-  public formatedColors: string[] = [];
+  public resistorColors = resistorColors;
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.colors.forEach((color) => {
-      this.formatedColors.push(resistorColors[color].hex);
-    });
-  }
+  ngOnInit(): void {}
 }

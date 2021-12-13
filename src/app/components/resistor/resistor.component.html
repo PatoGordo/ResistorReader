@@ -3,10 +3,10 @@
     <div class="top-concave-area"></div>
     <div class="colors-code">
       <div
-        *ngFor="let color of formatedColors"
+        *ngFor="let color of colors"
         class="color"
         [ngClass]="{ color: color }"
-        [ngStyle]="{ background: color }"
+        [ngStyle]="{ background: resistorColors[color].hex }"
       ></div>
     </div>
     <div class="bottom-concave-area"></div>
