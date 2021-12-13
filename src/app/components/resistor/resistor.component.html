@@ -2,10 +2,12 @@
   <span class="resistor resistor-shape">
     <div class="top-concave-area"></div>
     <div class="colors-code">
-      <div class="color" style="background: orange"></div>
-      <div class="color" style="background: violet"></div>
-      <div class="color" style="background: brown"></div>
-      <div class="color" style="background: gold"></div>
+      <div
+        *ngFor="let color of formatedColors"
+        class="color"
+        [ngClass]="{ color: color }"
+        [ngStyle]="{ background: color }"
+      ></div>
     </div>
     <div class="bottom-concave-area"></div>
   </span>
