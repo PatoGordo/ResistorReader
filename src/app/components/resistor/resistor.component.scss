@@ -1,0 +1,53 @@
+.resistor-wires {
+  position: absolute;
+  top: 120px;
+  z-index: 9;
+  width: 100%;
+  height: 4px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resistor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  height: 120px;
+  position: relative;
+  z-index: 10;
+  &.resistor-shape {
+    background: palegoldenrod;
+    border-radius: 30px;
+    .colors-code {
+      width: 320px / 2 + 60px - 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .color {
+        width: 16px;
+        height: 100%;
+      }
+    }
+    .bottom-concave-area,
+    .top-concave-area {
+      background: #fff;
+      width: 320px / 2 + 60px;
+      height: 120px / 2 - 42px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .top-concave-area {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .bottom-concave-area {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+  }
+}
